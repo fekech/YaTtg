@@ -1,8 +1,13 @@
-from init import *
-from cfg import *
-from gui import *
-import logging
+import init, cfg, gui
+import threading, os, time
 
-logging.basicConfig(level=logging.INFO, filename=os.getcwd()+chr(92)+'logs'+chr(92)+"yattg.log", filemode="w", format="%(asctime)s %(message)s")
+cfg.CfgCreate()
+gui_theard = threading.Thread(target=gui.LoadGui)
+gui_theard.start()
 
-CfgCreate(logging)
+while True:
+	time.sleep(0.6)
+	if gui_theard.is_alive():
+		pass
+	else:
+		os._exit(0)
