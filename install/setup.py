@@ -11,5 +11,7 @@ _cfg.read(os.getcwd()+chr(92)+'install.ini')
 os.system("pip install --upgrade pip")
 os.system(_pip + _cfg.get('NAMES','aiogram'))
 os.system(_pip + _cfg.get('NAMES','tk'))
+os.system(_pip + _cfg.get('NAMES','email'))
+os.system(_pip + _cfg.get('NAMES','imap'))
 
 input ('Нажмите любую клавишу что бы продолжить...')

@@ -4,9 +4,9 @@ import os
 def FileCheck(filename,):
 	try:
 		if os.path.exists(filename):
-			return True
-		else:
 			return False
+		else:
+			return True
 	except:
 		gui.AddObjectToWidget('file: {filename} is not found')
 
